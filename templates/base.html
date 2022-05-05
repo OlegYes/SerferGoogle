@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='scc/style.css')}}">
+    <title>Surfer</title>
+</head>
+
+<body>
+    <header id="header-ripple"> {% block header %}{% endblock %}</header>
+    <?php include 'js/jquery-3.6.0.min.js'; ?>
+    <?php include 'js/jquery.ripples-min.js'; ?>
+    <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.ripples-min.js')}}"></script>
+    <script>
+        $('#header-ripple').ripples({
+            resolution: 500,
+            dropRadius: 23,
+            perturbance: 0.02
+        });
+    </script>
+</body>
+</html>

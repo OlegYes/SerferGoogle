@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #55E6E1;
+	font-size: 60px;
+	font-family: "Caveat";
+	
+}
+
+label {
+	font-family: "Caveat";
+	font-size: 21px;
+}
+
+input {
+	font-family: "Caveat";
+	font-size: 21px;
+}
+
+
+
+form {
+	font-family: "Caveat";
+	clear: both;
+	text-align: center;
+	position: fixed;
+	top: 32%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+button {
+	font-family: "Caveat";
+	border-radius: 60px;
+	font-size: 21px;
+
+}
+
+#header-ripple {
+	
+	width: 100%;
+	height: 100vh;
+	background: url(background.jpg) no-repeat center;
+	background-size: cover;
+}
+
+#inputsize {
+	clear: both;
+	text-align: center;
+	position: fixed;
+	top: 54%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.wrapper {
+	background-color: whitesmoke;
+	list-style-type: none;
+	padding: 0;
+	border-radius: 60px;
+}
+
+.form-row {
+	display: flex;
+	justify-content: flex-end;
+	padding: .5em;
+}
+
+.form-row>label {
+	padding: .5em 1em .5em 0;
+	flex: 1;
+}
+
+.form-row>input {
+	flex: 2;
+}
+
+.form-row>input,
+.form-row>button {
+	padding: .5em ;
+}
+
+.form-row>button {
+	background: gray;
+	color: white;
+	border: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.form-row>input {
+		flex: 3;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.form-row>input {
+		flex: 4;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.form-row>input {
+		flex: 5;
+	}
+}

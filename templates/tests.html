@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="inputsize">
+        <button onclick="myFunction()" style="width:100px; height:40px;">Серфити</button>
+
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function myFunction() {
+
+            var page = webpage.create();
+            page.settings.resourceTimeout = 10000;
+            page.settings.userAgent = 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0';
+            page.open("siteUrl", function (status) {
+                if (status === 'success') {
+                    page.injectJs('/js/jquery-3.6.0.min.js');
+                    var Links = page.evaluate(function () {
+                        var links1 = $('html').find('a');
+                        var hrefs = [];
+
+                        $.each(links1, function (num, item) {
+                            var href = $(item).attr('href');
+                            if (href !== '#') {
+                                hrefs.push(href);
+                            }
+                        });
+
+                        return hrefs;
+                    });
+                    //for(var j=0;j<Links.length;j++){
+                    // console.log(Links[j]);
+                    // }
+
+                    pars(Links, page);
+                }
+            });
+
+
+        }        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block header %}
+        <a href="index.html"><button style="width:100px; height:40px;" type="submit">На головну</button></a>
+        <a href="index1.html"><button style="width:100px; height:40px;" type="submit">Зображення</button></a>
+        
+        <form action="https://google.com/search" method="get">
+            <h1>Серфер</h1>
+            <div>
+                <label>усі ці слова:</label>
+            </div>
+            <div> <input type="text" name="as_q"></div>
+            <div><label>точне слово або фразу:</label></div>
+
+            <div><input type="text" name="as_epq"></div>
+            <div><label>будь-яке з цих слів:</label></div>
+
+            <div><input type="text" name="as_oq"></div>
+
+            <div><label>жодне з цих слів:</label></div>
+
+            <div><input type="text" name="as_eq"></div>
+
+            <div>
+                <button style="width:100px; height:40px;" type="submit">Серфити</button>
+            </div>
+
+        </form>
+
+    {% endblock %}
