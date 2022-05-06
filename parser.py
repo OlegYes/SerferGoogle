@@ -20,24 +20,19 @@ def start_ref(q):
     menu = soup.find_all("h3")
 
 
-    q=0
     for i in menu:
-        q = q+1
+
         inmenu = i.find_parent().find_parent().find_parent().find_parent()
-        inmenu_lincs = inmenu.find("a")
-        lincs = inmenu_lincs.get("href")
-        h3 = inmenu.find("h3")
-        lincs_rev = str(lincs)
-        cite = inmenu.find("cite")
+        for q in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12:
+            lincs = inmenu.get("href")
+            h3 = inmenu.find("h3").text
+            span = inmenu.find("span")
 
-        text_stat = inmenu.find("div", {"data-content-feature" : 1})   #data-content-feature="1"
-        print(text_stat)
+            data = {q: [lincs, h3, span]}
+            print(data)
 
-        data[q] = [lincs_rev, h3,  cite, text_stat]
-    print(data)
-    # for p in data:
-    #     print(data[p][0])
-    #     #data_form_site =
+
+    return 0
 
 
 if __name__ == '__main__':

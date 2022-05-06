@@ -10,7 +10,7 @@ h1 {
 	color: #55E6E1;
 	font-size: 60px;
 	font-family: "Caveat";
-	
+
 }
 #my_search_item {
 font-family: "Caveat";
@@ -48,11 +48,7 @@ button {
 }
 
 #header-ripple {
-	
-	width: 100%;
-	height: 100vh;
-	background: url(background.jpg) no-repeat center;
-	background-size: cover;
+background-color: A1C2F9;
 }
 
 #inputsize {
